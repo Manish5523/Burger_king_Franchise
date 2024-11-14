@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(./Assets/bg-img.jpg);
+    background-size: cover;
+}
+form{
+    width: 100%;
+    height: 20vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+input{
+    margin-right: 8rem;
+    margin-left: 1rem;
+    accent-color: red;
+    cursor: pointer;
+}
+label{
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+}
+p{
+    font-family: "Grandstander", serif;
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 32px;
+    font-weight: 800;
+    padding: 1rem 0;
+    background-color: rgb(255, 251, 115);
+}
+
+img{
+    display: none;
+    margin: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+img:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+button {
+    font-family: "Poppins", serif;
+    background:rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 10px 15px;
+    text-align: center;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    position: relative;
+
+}
+
+
+button::after{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -6px;
+    height: 115%;
+    width: 110%;
+    background: linear-gradient(to right, #E382B4, #F4D66A, #570057);
+    background-size: 500% 500%;
+    background-position: 0 100%;
+    border-radius: 15px;
+    z-index: -1;
+    filter: blur(10px);
+    transition: all 0.5s ease;
+}
+
+button:hover{
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+button:hover::after{
+    background-position: 100% 100%;
+}
+
+button:active{
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.7);
+}
